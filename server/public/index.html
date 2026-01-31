@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genapa Bingo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header-controls">
+            <h1>Genapa Auditions Bingo</h1>
+            <div id="user-controls" style="display: none;">
+                <span id="welcome-msg"></span>
+                <button class="action-btn" onclick="switchUser()">Switch User</button>
+            </div>
+        </div>
+        
+        <div id="tabs" class="tabs">
+        </div>
+
+        <div id="board-container" class="board-container">
+            <!-- Bingo board will be rendered here -->
+        </div>
+
+        <!-- Prediction Section -->
+        <div class="prediction-section">
+            <button id="toggle-prediction-btn" class="action-btn" style="width: 100%;">Show Lineup Prediction</button>
+            <div id="prediction-container" class="hidden-section">
+                <!-- Content injected by JS -->
+            </div>
+        </div>
+        
+        <div id="notification-container" class="notification-container"></div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal-overlay">
+        <div class="modal">
+            <h2>Who are you?</h2>
+            <p>Select your name to play.</p>
+            <div id="member-select" class="member-select">
+                <!-- Members injected here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
